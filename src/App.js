@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import {Container} from "react-bootstrap";
+import Nav from "./components/ui/Nav";
+import Footer from "./components/ui/Footer";
+
+import WelcomePage from "./pages/WelcomePage";
+import TestPage from "./pages/TestPage";
+import {Route, Switch} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Nav />
       </header>
+      <main role={"main"} className={"flex-shrink-0"}>
+        <Container>
+          <Switch>
+              <Route path={"/"} exact>
+                <WelcomePage />
+              </Route>
+              <Route path={"/test"}>
+                <TestPage />
+              </Route>
+          </Switch>
+        </Container>
+      </main>
+      <Footer />
     </div>
   );
 }
