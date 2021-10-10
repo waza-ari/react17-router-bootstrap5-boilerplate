@@ -1,15 +1,18 @@
+import {useTranslation} from "react-i18next";
+
 const Content = () => {
+
+    const { t } = useTranslation();
+
     return (
         <div className="site-index">
 
             <div className="bg-light p-5 rounded-start m-3">
-                <h1 className="display-4">Hello, world!</h1>
-                <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
-                    attention to featured content or information.</p>
+                <h1 className="display-4">{t('welcome', 'Hello there')}</h1>
+                <p className="lead">{t('herounit')}</p>
                 <hr className="my-4" />
-                    <p>It uses utility classes for typography and spacing to space content out within the larger
-                        container.</p>
-                    <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    <p>{t('utility_classes')}</p>
+                    <a className="btn btn-primary btn-lg" href="#" role="button">{t('learn_more')}</a>
             </div>
 
             <div className="body-content">

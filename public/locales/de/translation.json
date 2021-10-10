@@ -1,0 +1,7 @@
+{
+  "welcome": "Hallo React",
+  "herounit": "Dies ist ein einzelnes Hero Feld basierend auf dem Jumbotron Stil, um besonderes Augenmerk auf den Inhalt zu legen.",
+  "utility_classes": "Für die Typografie und die Abstände innerhalb des größeren Containers werden spezielle Utility-Klassen verwendet.",
+  "learn_more": "Weitere Informationen",
+  "language": "Sprache"
+}
