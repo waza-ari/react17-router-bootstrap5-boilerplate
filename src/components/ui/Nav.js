@@ -4,9 +4,9 @@ import {useTranslation} from "react-i18next";
 import { De, Gb } from 'react-flags-select';
 import {useState} from "react";
 
-const NavComponent = (props) => {
+const NavComponent = () => {
 
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [language, setLanguageState] = useState(i18n.language);
 
     const setLanguage = (language) => {
@@ -36,7 +36,7 @@ const NavComponent = (props) => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link as={NavLink} to="/" exact>Home</Nav.Link>
-                        <Nav.Link as={NavLink} to="/test">Test</Nav.Link>
+                        <Nav.Link as={NavLink} to="/news">{t('News')}</Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

@@ -12,7 +12,7 @@ const Content = () => {
                 <p className="lead">{t('herounit')}</p>
                 <hr className="my-4" />
                     <p>{t('utility_classes')}</p>
-                    <a className="btn btn-primary btn-lg" href="#" role="button">{t('learn_more')}</a>
+                    <a className="btn btn-primary btn-lg" href="/" role="button">{t('learn_more')}</a>
             </div>
 
             <div className="body-content">
